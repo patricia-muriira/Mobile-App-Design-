@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belle Cakes - Menu</title>
+
+    <!-- Embedded CSS -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: url("images/background.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+      }
+
+      header {
+        background-color: rgba(106, 13, 173, 0.8);
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+      }
+
+      section {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        color: #6a0dad;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #6a0dad;
+      }
+
+      th {
+        background-color: #6a0dad;
+        color: white;
+      }
+
+      td a {
+        background-color: #6a0dad;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .cake-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .cake-box {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 15px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .cake-box img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .order-button {
+        background-color: #6a0dad;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+
+      .order-button:hover {
+        background-color: #007bff;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(106, 13, 173, 0.8);
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Belle Cakes - Menu</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Our Cake Selection</h2>
+
+      <!-- Cake Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Cake</th>
+            <th>Price (per kg)</th>
+            <th>Order Now</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chocolate Cake</td>
+            <td>Sh. 2200</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Vanilla Cake</td>
+            <td>Sh. 2200</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Red Velvet Cake</td>
+            <td>Sh. 2400</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Cupcakes</td>
+            <td>Sh. 1500</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Fruit Cake</td>
+            <td>Sh. 2900</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Banana Cake</td>
+            <td>Sh. 2200</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Strawberry Cake</td>
+            <td>Sh. 2200</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Black Forest Cake</td>
+            <td>Sh. 2250</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Sponge Cake</td>
+            <td>Sh. 2200</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+          <tr>
+            <td>Angel Food Cake</td>
+            <td>Sh. 2500</td>
+            <td><a href="order.html">Order Now</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Cake Gallery</h2>
+      <div class="cake-gallery">
+        <div class="cake-box">
+          <img src="images/cake3.jpg" alt="Chocolate Cake" />
+          <h3>Chocolate Cake</h3>
+          <p>Sh. 2200/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake4.jpg" alt="Vanilla Cake" />
+          <h3>Vanilla Cake</h3>
+          <p>Sh. 2200/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake14.jpg" alt="Red Velvet Cake" />
+          <h3>Red Velvet Cake</h3>
+          <p>Sh. 2400/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake2.jpg" alt="Cupcake" />
+          <h3>Cupcakes</h3>
+          <p>Sh. 1500/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake8.jpg" alt="Fruit Cake" />
+          <h3>Fruit Cake</h3>
+          <p>Sh. 2900/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake1.jpg" alt="Banana Cake" />
+          <h3>Banana Cake</h3>
+          <p>Sh. 2200/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake9.jpg" alt="Strawberry Cake" />
+          <h3>Strawberry Cake</h3>
+          <p>Sh. 2200/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake15.jpg" alt="Black Forest Cake" />
+          <h3>Black Forest Cake</h3>
+          <p>Sh. 2250/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake16.jpeg" alt="Sponge Cake" />
+          <h3>Sponge Cake</h3>
+          <p>Sh. 2200/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+        <div class="cake-box">
+          <img src="images/cake12.jpeg" alt="Angel Food Cake" />
+          <h3>Angel Food Cake</h3>
+          <p>Sh. 2500/kg</p>
+          <a href="order.html" class="order-button">Order Now</a>
+        </div>
+      </div>
+      <h2>Cake Decorations</h2>
+      <p>
+        We offer a variety of decorations to make your cake truly special. Below
+        are our decoration options and prices:
+      </p>
+      <table>
+        <tr>
+          <th>Decoration Type</th>
+          <th>Price (Sh.)</th>
+        </tr>
+        <tr>
+          <td>Buttercream Icing</td>
+          <td>Sh. 500</td>
+        </tr>
+        <tr>
+          <td>Fondant Icing</td>
+          <td>Sh. 1000</td>
+        </tr>
+        <tr>
+          <td>Fresh Fruit Toppings</td>
+          <td>Sh. 800</td>
+        </tr>
+        <tr>
+          <td>Chocolate Ganache</td>
+          <td>Sh. 1200</td>
+        </tr>
+        <tr>
+          <td>Custom Cake Topper</td>
+          <td>Sh. 700</td>
+        </tr>
+        <tr>
+          <td>Edible Glitter</td>
+          <td>Sh. 300</td>
+        </tr>
+      </table>
+      <p>
+        Decorations are available as add-ons when you order your cake. Customize
+        your cake to suit your event perfectly!
+      </p>
+      <a href="order.html" class="order-button">Order Now</a>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Belle Cakes. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

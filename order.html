@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belle Cakes - Order Now</title>
+
+    <!-- Embedded CSS -->
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: url("images/background.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+      }
+
+      header {
+        background-color: rgba(106, 13, 173, 0.8);
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        max-width: 800px;
+        margin: 20px auto;
+      }
+
+      h2 {
+        color: #6a0dad;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        gap: 10px;
+      }
+
+      .file-upload {
+        padding: 5px;
+      }
+
+      button {
+        background-color: #6a0dad;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #007bff;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(106, 13, 173, 0.8);
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+
+    <!-- JavaScript to set today's date as the minimum for the date picker -->
+    <script>
+      window.onload = function () {
+        const today = new Date().toISOString().split("T")[0];
+        document.getElementById("delivery_date").setAttribute("min", today);
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Order Your Cake</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="order-form">
+        <h2>Customize Your Cake Order</h2>
+
+        <form
+          action="mailto:patriciamuriira@gmail.com"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <!-- Customer Details -->
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+
+          <!-- Cake Size Selection (Radio Buttons) -->
+          <label for="size">Cake Size:</label>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="cake_size" value="Small" />
+              Small</label
+            >
+            <label
+              ><input type="radio" name="cake_size" value="Medium" />
+              Medium</label
+            >
+            <label
+              ><input type="radio" name="cake_size" value="Large" />
+              Large</label
+            >
+          </div>
+
+          <!-- Cake Flavor Selection (Dropdown) -->
+          <label for="flavor">Cake Flavor:</label>
+          <select id="flavor" name="cake_flavor" required>
+            <option value="">Select a flavor</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Red Velvet">Red Velvet</option>
+            <option value="Lemon">Lemon</option>
+            <option value="Marble">Marble</option>
+            <option value="Carrot">Carrot</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Almond">Almond</option>
+            <option value="Coconut">Coconut</option>
+            <option value="Lemon Blueberry">Lemon Blueberry</option>
+            <option value="Funfetti">Funfetti</option>
+            <option value="Chocolate Mint">Chocolate Mint</option>
+            <option value="Chocolate Hazelnut">Chocolate Hazelnut</option>
+            <option value="Peanut Butter">Peanut Butter</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Nutella">Nutella</option>
+          </select>
+
+          <!-- Cake Decoration Options (Checkboxes) -->
+          <label for="decorations">Cake Decorations:</label>
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" name="decorations" value="Sprinkles" />
+              Sprinkles</label
+            >
+            <label
+              ><input type="checkbox" name="decorations" value="Fresh Fruit" />
+              Fresh Fruit</label
+            >
+            <label
+              ><input type="checkbox" name="decorations" value="Fondant" />
+              Fondant</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="decorations"
+                value="Edible Flowers"
+              />
+              Edible Flowers</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="decorations"
+                value="Chocolate Drizzle"
+              />
+              Chocolate Drizzle</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="decorations"
+                value="Whipped Cream"
+              />
+              Whipped Cream</label
+            >
+          </div>
+
+          <!-- Date Picker for Delivery -->
+          <label for="delivery_date">Preferred Delivery Date:</label>
+          <input type="date" id="delivery_date" name="delivery_date" required />
+
+          <!-- Cake Decoration Image Upload -->
+          <label for="decoration_image"
+            >Upload Cake Decoration Image (optional):</label
+          >
+          <input
+            type="file"
+            id="decoration_image"
+            name="decoration_image"
+            accept="image/*"
+            class="file-upload"
+          />
+
+          <!-- Cake Message (Optional) -->
+          <label for="cake_message">Cake Message (optional):</label>
+          <input
+            type="text"
+            id="cake_message"
+            name="cake_message"
+            placeholder="Enter your cake message here (e.g., Happy Birthday!)"
+          />
+
+          <!-- Additional Notes -->
+          <label for="notes">Additional Notes:</label>
+          <textarea
+            id="notes"
+            name="notes"
+            placeholder="Any special requests or notes...eg, Vegan Cake, Gluten Free Cake, etc."
+          ></textarea>
+
+          <!-- Submit Button -->
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Belle Cakes. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

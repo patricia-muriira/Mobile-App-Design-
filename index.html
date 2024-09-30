@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belle Cakes - Welcome</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Georgia", serif; /* Elegant font for high-end look */
+        line-height: 1.6;
+        background: url("images/background.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+      }
+
+      header {
+        background-color: rgba(106, 13, 173, 0.9);
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #ffcc00; /* Gold color on hover */
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      main {
+        padding: 20px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        max-width: 1200px; /* Centered main content */
+      }
+
+      .intro {
+        margin-bottom: 40px;
+      }
+
+      .intro h2 {
+        color: #6a0dad;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .intro p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        padding: 10px 20px;
+        background-color: #9b30ff;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: #8a2be2;
+      }
+
+      /* Carousel */
+      .carousel-container {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel-images img {
+        width: 100%; /* Full width */
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+
+      .carousel-images img:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+      }
+
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        transition: background-color 0.3s;
+      }
+
+      .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .carousel-button.prev {
+        left: 10px;
+      }
+
+      .carousel-button.next {
+        right: 10px;
+      }
+
+      /* Reviews Section */
+      .reviews {
+        margin: 40px 0;
+      }
+
+      .reviews-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Spacing between reviews */
+      }
+
+      .review {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s;
+      }
+
+      .review:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+      }
+
+      .review img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      .review .stars {
+        color: gold;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(106, 13, 173, 0.9);
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Belle Cakes!</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Freshly Baked Goodness Delivered to Your Doorstep</h2>
+        <p>We bake with love to bring you the best cakes and pastries.</p>
+        <button class="button" onclick="window.location.href='order.html';">
+          Order Now
+        </button>
+      </section>
+
+      <!-- Bestsellers Section with Carousel -->
+      <section class="bestsellers">
+        <h2>Bestsellers</h2>
+        <div class="carousel-container">
+          <div class="carousel-images">
+            <img src="images/cake1.jpg" alt="Cake 1" />
+            <img src="images/cake2.jpg" alt="Cake 2" />
+            <img src="images/cake3.jpg" alt="Cake 3" />
+            <img src="images/cake4.jpg" alt="Cake 4" />
+          </div>
+          <button class="carousel-button prev" onclick="prevSlide()">❮</button>
+          <button class="carousel-button next" onclick="nextSlide()">❯</button>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container">
+          <div class="review">
+            <img src="images/profile1.jpeg" alt="Profile Photo 1" />
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"The best cakes in town! Highly recommended!"</p>
+              <p>- Janet Galana</p>
+            </div>
+          </div>
+          <div class="review">
+            <img src="images/profile2.png" alt="Profile Photo 2" />
+            <div>
+              <div class="stars">★★★★☆</div>
+              <p>"Absolutely loved the chocolate cake! Will order again!"</p>
+              <p>- John Mwangi</p>
+            </div>
+          </div>
+          <div class="review">
+            <img src="images/profile3.png" alt="Profile Photo 3" />
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Amazing service and delicious pastries!"</p>
+              <p>- Sarah M</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Belle Cakes. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const carouselImages = document.querySelector(".carousel-images");
+      let currentIndex = 0;
+      const imagesPerSlide = 3;
+
+      function updateCarousel() {
+        const totalSlides = document.querySelectorAll(
+          ".carousel-images img"
+        ).length;
+        const imageWidth = document.querySelector(
+          ".carousel-images img"
+        ).clientWidth;
+        carouselImages.style.transform =
+          "translateX(" + -currentIndex * imageWidth + "px)";
+      }
+
+      function nextSlide() {
+        const totalSlides = document.querySelectorAll(
+          ".carousel-images img"
+        ).length;
+        currentIndex =
+          (currentIndex + 1) % Math.ceil(totalSlides / imagesPerSlide);
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        const totalSlides = document.querySelectorAll(
+          ".carousel-images img"
+        ).length;
+        currentIndex =
+          (currentIndex - 1 + Math.ceil(totalSlides / imagesPerSlide)) %
+          Math.ceil(totalSlides / imagesPerSlide);
+        updateCarousel();
+      }
+
+      // Auto-scroll the carousel every 5 seconds
+      setInterval(nextSlide, 5000);
+    </script>
+  </body>
+</html>
